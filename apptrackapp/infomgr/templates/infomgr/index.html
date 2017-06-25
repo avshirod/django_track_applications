@@ -1,10 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title></title>
-</head>
 <body>
-<h1>HAHAHAHAHA</h1>
+<div>
+    <h1>Welcome!</h1>
+</div>
+<div>
+    {% for user in users %}
+    <div>
+        <span>{{ user }}</span>
+    </div>
+    {% endfor %}
+</div>
+
 </body>
-</html>
