@@ -1,12 +1,13 @@
 from __future__ import unicode_literals
 from django.core.validators import RegexValidator
 from django.db import models
-# from django.contrib.auth.models import User
+from django.contrib.auth.models import User
 # from django.dispatch import receiver
 # from django.db.models.signals import post_save
 # Create your models here.
 
 class UserInfo(models.Model):
+    user = models.ForeignKey(User, default=1)
     first_name = models.CharField(max_length=30, default='John')
     middle_name = models.CharField(max_length=30, blank=True)
     last_name = models.CharField(max_length=50, default='Doe')
